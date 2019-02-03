@@ -68,7 +68,7 @@ public class Exec{
     //Арифметическе операции. В каждой из них идет сначала поиск перменных, если на вход подается переменная типа VAR. Если переменная не типа VAR, то идет простая рафиметическая операция с соседними числами
 
     private static int mul(Perem per, Token token) {
-        if (token.getName() == "VAR"){
+        if (token.getName().equals("VAR")){
             for (Perem p : hashPerem){
                 if (p.getName().equals(token.getValue())){
                     return per.getValue()*p.getValue();
@@ -81,7 +81,7 @@ public class Exec{
         return 0;
     }
     private static int div(Perem per, Token token) {
-        if (token.getName() == "VAR"){
+        if (token.getName().equals("VAR")){
             for (Perem p : hashPerem){
                 if (p.getName().equals(token.getValue())){
                     return per.getValue()/p.getValue();
@@ -94,7 +94,7 @@ public class Exec{
         return 0;
     }
     private static int minus(Perem per, Token token) {
-        if (token.getName() == "VAR"){
+        if (token.getName().equals("VAR")){
             for (Perem p : hashPerem){
                 if (p.getName().equals(token.getValue())){
                     return per.getValue() - p.getValue();
@@ -107,7 +107,7 @@ public class Exec{
         return 0;
     }
     private static int plus(Perem per, Token token) {
-        if (token.getName() == "VAR"){
+        if (token.getName().equals("VAR")){
             for (Perem p : hashPerem){
                 if (p.getName().equals(token.getValue())){
                     return per.getValue() + p.getValue();
